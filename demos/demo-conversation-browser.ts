@@ -19,37 +19,39 @@ async function main() {
   const api = new ChatGPTAPIBrowser({ email, password, debug: true })
   await api.init()
 
-  const prompt = 'What is OpenAI?'
+  const prompt = '안녕'
 
   const response = await oraPromise(api.sendMessage(prompt), {
     text: prompt
   })
 
   console.log(response)
+  console.log('Done!:', response)
 
-  const prompt2 = 'Did they made OpenGPT?'
+  const prompt2 = '넌 누구야?'
 
-  console.log(
-    await oraPromise(api.sendMessage(prompt2), {
-      text: prompt2
-    })
-  )
+  const response2 = await oraPromise(api.sendMessage(prompt2), {
+    text: prompt2
+  })
 
-  const prompt3 = 'Who founded this institute?'
+  console.log('Done!2:', response2)
 
-  console.log(
-    await oraPromise(api.sendMessage(prompt3), {
-      text: prompt3
-    })
-  )
+  const prompt3 = '난 누구게?'
 
-  const prompt4 = 'Who is that?'
+  const response3 = await oraPromise(api.sendMessage(prompt3), {
+    text: prompt3
+  })
+  console.log('Done!3:', response3)
 
-  console.log(
-    await oraPromise(api.sendMessage(prompt4), {
-      text: prompt4
-    })
-  )
+  const prompt4 = '송도에 대해서 설명해줘'
+
+  const response4 = await oraPromise(api.sendMessage(prompt4), {
+    text: prompt4
+  })
+
+  console.log('Done!4:', response4)
+
+  return
 }
 
 main().catch((err) => {

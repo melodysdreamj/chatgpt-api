@@ -25,8 +25,7 @@ async function main() {
   })
   await api.init()
 
-  const prompt =
-    'Write a python version of bubble sort. Do not include example usage.'
+  const prompt = 'hi~ tell me about yourself'
 
   const response = await oraPromise(api.sendMessage(prompt), {
     text: prompt
